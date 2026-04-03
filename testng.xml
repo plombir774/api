@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="API Suite">
+    <test name="E2E flow">
+        <classes>
+            <class name="tests.space.CreateTest"/>
+            <class name="tests.board.CreateSpaceBoardTest"/>
+            <class name="tests.board.DeleteBoardTest"/>
+            <class name="tests.space.DeleteSpaceTest"/>
+        </classes>
+    </test>
+</suite>
