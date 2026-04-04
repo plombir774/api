@@ -7,6 +7,8 @@ import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static Regex.Regex.pattern;
+import static Regex.Regex.pattern1;
 
 
 public class CreateTest extends BaseTest {
@@ -31,8 +33,10 @@ public class CreateTest extends BaseTest {
                         .extract().response();
 
     Assert.assertEquals(response.statusCode(),200);
-    Assert.assertEquals(response.jsonPath().getString("title"),"OpenSpace");
-    Assert.assertFalse(response.jsonPath().getBoolean("archived"));
+    Assert.assertTrue(response.jsonPath().getString("created").matches(pattern));
+    Assert.assertTrue(response.jsonPath().getString("id").matches(pattern1));
+
+
 
     DataTest.spaceId = response.jsonPath().getInt("id");
 

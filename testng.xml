@@ -1,11 +1,21 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="API Suite">
-    <test name="E2E flow">
+<suite name="API Tests">
+
+    <test name="Create flow">
+
+        <groups>
+            <run>
+                <include name="space"/>
+                <include name="board"/>
+                <include name="column"/>
+            </run>
+        </groups>
+
         <classes>
-            <class name="tests.space.CreateTest"/>
-            <class name="tests.board.CreateSpaceBoardTest"/>
-            <class name="tests.board.DeleteBoardTest"/>
-            <class name="tests.space.DeleteSpaceTest"/>
+            <class name="pojoTest.pojoCreateSpace"/>
+            <class name="pojoTest.pojoCreateBoard"/>
+            <class name="pojoTest.pojoCreateColumn"/>
         </classes>
+
     </test>
+
 </suite>
