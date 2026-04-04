@@ -1,0 +1,1 @@
+{"uuid":"fec59279-6380-4abc-bc74-91dc22b7fd4b","name":"RestAssured","children":["ea989143-2345-4c15-8ff1-12a315dd6c49"],"befores":[],"afters":[{"name":"teardown","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1775224235765,"stop":1775224235766}],"start":1775224227399,"stop":1775224235766}
