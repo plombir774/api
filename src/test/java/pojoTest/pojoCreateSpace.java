@@ -21,8 +21,6 @@ public class pojoCreateSpace  extends BaseTest {
         Space space = Space.builder()
                 .title("OpenSpace")
                 .external_id(1)
-                .parent_entity_uid("privet")
-                .for_everyone_access_role_id("user")
                 .build();
 
         Response response =
