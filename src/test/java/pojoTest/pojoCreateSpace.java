@@ -15,12 +15,12 @@ public class pojoCreateSpace  extends BaseTest {
 
 
 
-    @Test (groups = "space")
+    @Test ( dataProvider = "spaceData" ,dataProviderClass = DataTest.class, groups = "space")
 
-    public void createNewSpace() {
+    public void createNewSpace(String title,Integer external_Id) {
         Space space = Space.builder()
-                .title("OpenSpace")
-                .external_id(1)
+                .title(title)
+                .external_id(external_Id)
                 .build();
 
         Response response =
