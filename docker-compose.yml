@@ -1,0 +1,6 @@
+services:
+  tests:
+    build: .
+    container_name: restassured-tests-compose
+    environment:
+      API_TOKEN: ${API_TOKEN}
