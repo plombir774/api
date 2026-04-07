@@ -4,6 +4,7 @@ import base.BaseTest;
 import constants.SpaceEndPoints;
 import data.DataTest;
 import io.restassured.response.Response;
+import jdk.jfr.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pojo.Space;
@@ -16,7 +17,7 @@ public class pojoCreateSpace  extends BaseTest {
 
 
     @Test ( dataProvider = "spaceData" ,dataProviderClass = DataTest.class, groups = "space")
-
+    @Description("Создание нового space через POJO")
     public void createNewSpace(String title,Integer external_Id) {
         Space space = Space.builder()
                 .title(title)

@@ -4,6 +4,7 @@ import base.BaseTest;
 import constants.ColumnsEndPoints;
 import data.DataTest;
 import io.restassured.response.Response;
+import jdk.jfr.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pojo.Column;
@@ -14,6 +15,7 @@ public class pojoCreateColumn  extends BaseTest {
 
 
 @Test (groups = "column",dependsOnGroups = "board")
+@Description("Создание новой column через POJO")
 
     public void Create_New_Column(){
 

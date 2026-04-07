@@ -4,6 +4,7 @@ import base.BaseTest;
 import constants.BoardEndPoints;
 import data.DataTest;
 import io.restassured.response.Response;
+import jdk.jfr.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pojo.Board;
@@ -14,7 +15,7 @@ import static Regex.Regex.pattern2;
 public class pojoCreateBoard  extends BaseTest {
 
     @Test (groups = "board", dependsOnGroups = "space")
-
+    @Description("Создание нового board через POJO")
     public void createNewBoard() {
 
         Board board = Board.builder()
