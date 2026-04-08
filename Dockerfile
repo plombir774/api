@@ -7,4 +7,4 @@ COPY src ./src
 
 RUN mvn dependency:resolve
 
-CMD ["mvn", "-Dtest=pojoCreateSpace", "test", "-e"]
+CMD ["mvn", "clean", "test"]
